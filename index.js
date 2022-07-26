@@ -35,7 +35,7 @@ buttonFinish.addEventListener("click", sumInput);
 function sumInput() {
     // buttonAdd.disabled = true;
 
-    divArray.textContent = `Отсортированный по возрастанию массив: [${values.sort()}]`;
+    divArray.textContent = `Отсортированный по возрастанию массив: [${values.sort( (a,b) => {return a - b;} )}]`;
 
     for (let i = 0; i < values.length; i++) {
         sum += Number(values[i]);
